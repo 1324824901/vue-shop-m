@@ -1,0 +1,78 @@
+body {
+    background: url("../../../src/assets/mIcon/img_forget_password_bg.png") no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  .fpHead {
+    margin-top: 0.72rem;
+    .fp_left {
+      position: absolute;
+      width: 0.36rem;
+      height: 0.62rem;
+      top: 1.7rem;
+      margin-left: 0.45rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      line-height: 2.62rem;
+      text-align: center;
+      font-size: 0.49rem;
+      color: #fff;
+    }
+  }
+  .fpMain {
+    position: relative;
+    .fp_V {
+      width: 2.56rem;
+      height: 0.92rem;
+      font-size: 0.32rem;
+      padding: 0;
+      background: #fa771c;
+      position: absolute;
+      top: 1.7rem;
+      right: 1.6rem;
+    }
+    .fp_VV {
+      height: 1.52rem;
+      width: 8rem;
+      background: #fa771c;
+      margin-top: 1.78rem;
+      font-size: .52rem;
+    }
+    margin-left: 1.2rem;
+    margin-top: 4.1rem;
+    .fpIpt {
+      position: relative;
+      input {
+        width: 7.15rem;
+        height: 1.4rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 0.04rem solid #fff;
+        padding-left: 0.85rem;
+        font-size: 0.37rem;
+      }
+      .fpBackImg {
+        position: absolute;
+        width: 0.6rem;
+        height: 0.72rem;
+        background: url("../../../src/assets/mIcon/icon_danbaoren.png") no-repeat;
+        top: 0.4rem;
+        left: 0.05rem;
+        background-size: 100% 100%;
+      }
+      .fpBackImg1 {
+        position: absolute;
+        width: 0.45rem;
+        height: 0.66rem;
+        background: url("../../../src/assets/mIcon/icon_shouji_small.png") no-repeat;
+        left: 0.1rem;
+        top: 0.4rem;
+        background-size: 100% 100%;
+      }
+    }
+  }

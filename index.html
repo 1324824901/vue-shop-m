@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <meta name="description" content="不超过150个字符" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width">
+  <meta content="caibaojian" name="author" />
+  <title>www.d1sc.com</title>
+  <script type="text/javascript">
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth >= 1080) {
+            docEl.style.fontSize = '100px';
+          } else {
+            docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+          }
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    font-size: .34rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  } 
+  /* 上拉下拉 */
+.page-loadmore-wrapper {
+  overflow: scroll;
+}
+.mint-loadmore-top, .mint-loadmore-bottom {
+    text-align: center;
+    height: 1.48rem !important;
+    line-height: 1.48rem !important;
+}
+.loading-background,
+  .mint-loadmore-top span {
+    -webkit-transition: .2s linear;
+    transition: .2s linear
+  }
+
+  .mint-loadmore-top span {
+    display: inline-block;
+    vertical-align: middle
+  }
+
+  .mint-loadmore-top span.is-rotate {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+
+  .page-loadmore .mint-spinner {
+    display: inline-block;
+    vertical-align: middle
+  }
+  .page-loadmore-wrapper {
+    overflow: scroll
+  }
+
+  .mint-loadmore-bottom span {
+    display: inline-block;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    vertical-align: middle;
+  }
+
+  .mint-loadmore-bottom span.is-rotate {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+</style>

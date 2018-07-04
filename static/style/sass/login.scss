@@ -1,0 +1,151 @@
+.loginHead {
+    height: 1.36rem;
+    background: #fc7a22;
+    margin-top: .72rem;
+    p {
+      line-height: 1.36rem;
+      text-align: center;
+      color: #fff;
+      font-size: 0.54rem;
+    }
+  }
+  .regMain {
+    .regBackImg11 {
+      position: absolute;
+      width: 0.45rem;
+      height: 0.51rem;
+      background: url("../../../src/assets/mIcon/icon_yonghu.png") no-repeat;
+      top: 3rem;
+      left: 1.3rem;
+      background-size: 100% 100%;
+    }
+    .ipt2 {
+      margin-top: 2.54rem;
+    }
+    .forgetPass{
+      line-height: 1.2rem;
+      font-size: .39rem;
+      color: #85868a;
+      margin-left: 7.44rem;
+    }
+    .otherLogin{
+      line-height: 1.67rem;
+      font-size: .34rem;
+      color: #727272;
+      text-align: center;
+    }
+    .loginImg{
+      height: 1.22rem;
+      width: 1.2rem;
+      margin: 0 auto;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .regMain {
+    p{
+      font-size: .4rem;
+      line-height: 2.22rem;
+      text-align: center;
+      span{
+        font-size: .54rem;
+        color: #f97719;
+      }
+    }
+    .mint-button {
+      background: #f97719;
+      height: 1.5rem;
+    }
+    .regFootBtn {
+      width: 9rem;
+      margin-top: 0.76rem;
+      margin-left: 0.9rem;
+      font-size: 0.46rem;
+    }
+    .regValidate1 {
+      position: absolute;
+      font-size: 0.34rem;
+      width: 3.3rem;
+      top: 12.66rem;
+      right: 0.8rem;
+    }
+    background: #f9f9f9;
+    .regIpt {
+      position: relative;
+      .regBackImg {
+        position: absolute;
+        width: 0.45rem;
+        height: 0.51rem;
+        background: url("../../../src/assets/mIcon/icon_yonghu.png") no-repeat;
+        top: 1.2rem;
+        left: 1.3rem;
+        background-size: 100% 100%;
+      }
+      .regBackImg1 {
+        position: absolute;
+        width: 0.54rem;
+        height: 0.69rem;
+        background: url("../../../src/assets/mIcon/icon_yanzhengma.png") no-repeat;
+        left: 1.3rem;
+        top: 0.4rem;
+        background-size: 100% 100%;
+      }
+      .regBackImg2 {
+        position: absolute;
+        width: 0.54rem;
+        height: 0.57rem;
+        background: url("../../../src/assets/mIcon/icon_mima.png") no-repeat;
+        left: 1.3rem;
+        top: 0.5rem;
+        background-size: 100% 100%;
+      }
+      .regBackImg3 {
+        position: absolute;
+        width: 0.57rem;
+        height: 0.54rem;
+        background: url("../../../src/assets/mIcon/icon_queren.png") no-repeat;
+        left: 1.3rem;
+        top: 0.5rem;
+        background-size: 100% 100%;
+      }
+      .regBackImg4 {
+        position: absolute;
+        width: 0.6rem;
+        height: 0.72rem;
+        background: url("../../../src/assets/mIcon/icon_danbaoren.png") no-repeat;
+        left: 1.3rem;
+        top: 0.4rem;
+        background-size: 100% 100%;
+      }
+      .regBackImg5 {
+        position: absolute;
+        width: 0.54rem;
+        height: 0.69rem;
+        background: url("../../../src/assets/mIcon/icon_yanzhengma.png") no-repeat;
+        left: 1.3rem;
+        top: 0.4rem;
+        background-size: 100% 100%;
+      }
+      input {
+        margin-left: 0.9rem;
+        height: 1.5rem;
+        width: 7.8rem;
+        background: #fff;
+        border: 0.01rem solid red;
+        outline: none;
+        font-size: 0.41rem;
+        color: #9d9d9d;
+        border-radius: 2%;
+        padding-left: 1.2rem;
+        margin-bottom: 0.42rem;
+      }
+      .regValidate {
+        width: 4.02rem;
+      }
+      .ipt1 {
+        margin-top: 0.75rem;
+      }
+    }
+  }

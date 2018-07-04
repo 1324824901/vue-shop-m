@@ -1,0 +1,68 @@
+.sharedd {
+    .shar {
+      float: left;
+      p {
+        font-size: 0.5rem;
+        font-weight: 700;
+        color: #fff;
+        margin-left: 3.52rem;
+        margin-top: 0.4rem;
+      }
+    }
+    background: #fc7a22;
+    height: 1.5rem;
+    .back-withe {
+      height: 0.71rem;
+      width: 0.48rem;
+      margin: 0.4rem 0 0.4rem 0.32rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .share-background {
+    background: #fafafa;
+  }
+  .sharedGoodd {
+    height: 3.33rem;
+    margin: 0.22rem 0.16rem;
+    div {
+      float: left;
+    }
+    .shareGooddImg {
+      height: 3.33rem;
+      width: 4.8rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .shareGoodP {
+      height: 3.33rem;
+      width: 5.36rem;
+      margin-left: 0.32rem;
+  
+      span {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        font-size: 0.37rem;
+        margin-top: 0.87rem;
+        font-weight: 700;
+      }
+      .share-price {
+        color: #f76f19;
+      }
+      .share-volume {
+        color: #5d5d5d;
+      }
+      p {
+        margin-top: 0.64rem;
+        float: left;
+        margin-right: 0.34rem;
+        font-weight: 700;
+      }
+    }
+  }
