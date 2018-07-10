@@ -13,6 +13,7 @@ const Bonus = resolve => require(['@/components/myUse/bonus.vue'], resolve);
 const Auction = resolve => require(['@/components/myUse/auction.vue'], resolve);
 const Tug = resolve => require(['@/components/myUse/Tug.vue'], resolve);
 const personalData = resolve => require(['@/components/myUse/personalData.vue'], resolve);
+const shezhi = resolve => require(['@/components/myUse/shezhi.vue'], resolve);
 const myOrder = resolve => require(['@/components/myUse/myOrder.vue'], resolve);
 const notLogin = resolve => require(['@/components/loginRegister/notlogin.vue'], resolve);
 const register = resolve => require(['@/components/loginRegister/register.vue'], resolve);
@@ -34,6 +35,11 @@ const change = resolve => require(['@/components/my/change.vue'], resolve);
 Vue.use(Router);
 export default new Router({
   routes: [
+    {
+      path: "/my/shezhi",
+      name: "shezhi",
+      component: shezhi
+    },
     {
       path: "/",
       name: "首页",
@@ -61,7 +67,7 @@ export default new Router({
     },
     {
       path: "/cart",
-      name: "购物车",
+      name: "Cart",
       component: Cart
     },
     {
@@ -111,7 +117,7 @@ export default new Router({
     },
     {
       path: "/login",
-      name: "登录",
+      name: "login",
       component: login
     },
     {

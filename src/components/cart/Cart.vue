@@ -42,7 +42,7 @@
           <span type="checkbox" class="checkbox checkbox1" :class="{check: dataa.checked}" @click="selectedProduct(dataa)"></span>
         </div>
         <div class="cartListdiv2_2">
-          <img :src="'http://www.d1sc.com/'+changeData(dataa.goods.goods_main_photo.path,dataa.goods.goods_main_photo.name)" alt="" @click="goto_detail(dataa.goods.id)">
+          <img v-if="dataa.goods.goods_main_photo" :src="'http://www.d1sc.com/'+changeData(dataa.goods.goods_main_photo.path,dataa.goods.goods_main_photo.name)" alt="" @click="goto_detail(dataa.goods.id)">
         </div>
         <div class="cartListdiv2_3" v-show="isShow">
           <p class="cartListPtitle" @click="goto_detail(dataa.goods.id)">{{dataa.goods.goods_name}}</p><!-- //商品标题。 -->
@@ -97,12 +97,10 @@
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 import qs from "qs";
 import { Toast } from "mint-ui";
-
 export default {
   data() {
     return {
@@ -115,10 +113,9 @@ export default {
       id: "", //详情页id
       userid:"",
       //编辑购物车数量
-      paramsList: ""
+      paramsList: "",
     };
   },
-
   //挂载用户名
   beforeMount(){
     this.userid=localStorage.userid;
@@ -189,7 +186,6 @@ export default {
         .post(
           "/cart_list.htm",
           qs.stringify({
-            // user_id: 153351,
             user_id: this.userid,
             currentPage: 0
           })
@@ -224,7 +220,6 @@ export default {
       });
       
       var payInfos = JSON.stringify(info);
-      console.log(payInfos);
       axios
         .post(
           "/apiOrderShow.htm",
@@ -236,24 +231,32 @@ export default {
         const {result}=res.data;
         const {storeCartList}=result;
         let order_id=[];
+        let order_idd=[];
         storeCartList.forEach(function(item,index){
-          console.log(item);
-          console.log(index);
-         order_id.push(item.id);
-         console.log(order_id.push(item.id));
+        order_id.push(item.id);
+           // item.gcs.forEach((itemGcs, indexx) => {
+           //  order_idd.push(itemGcs.id);
+           //    for( var ii=0; ii<order_idd.length; ii++){
+           //      console.log(order_idd[ii]);
+           //    }
+           //  })
+         order_idd.push(item.gcs[0].id);
         })
+       
           var orderId = JSON.stringify(order_id).slice(1,6);
+          var orderIdd = JSON.stringify(order_idd).slice(1,7);
+          // var orderIdd =order_idd.join(',');
           console.log(orderId);
+          console.log(orderIdd);
           if(info.length==0){
             Toast('购物车为空');
           }else{
             this.$router.push({
             path:'/confirm',
             name:'confirm',
-            params:{orderId}
+            params:{orderId,orderIdd}
             });
           }
-          
          })
         .catch(function(error) {
         console.log(error);
@@ -272,7 +275,6 @@ export default {
         .then(res => {
           const { data } = res;
           const { msg, result, status } = data;
-
           if (msg === "删除成功") {
             // 删除成功
             Toast("删除成功");
@@ -293,7 +295,6 @@ export default {
           goodsCartId: goodInfo.id
         }
       ];
-
       axios
         .post(
           "/api_edit_cart.htm",
@@ -318,7 +319,6 @@ export default {
       this.editCartList(goodInfo);
       this.calcTotalPrice();
     },
-    //
     //总价
     calcTotalPrice() {
       this.totalMoney = 0;
@@ -588,11 +588,13 @@ export default {
   }
 
   .cartP {
+    position: absolute;
     .cartImg {
       margin-left: 3.5rem;
       margin-top: 3rem;
       width: 3.92rem;
       height: 3.17rem;
+
     }
     img {
       width: 100%;
@@ -605,12 +607,14 @@ export default {
       text-align: center;
       margin-bottom: 0.33rem;
       margin-top: 0.59rem;
+      margin-left: 3.1rem;
     }
     span {
       font-size: 0.33rem;
       color: #666666;
       display: block;
       text-align: center;
+      margin-left: 3.1rem;
     }
   }
 }

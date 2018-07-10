@@ -286,13 +286,8 @@ export default {
   //           }
   //           return arrByZMM;
   //     },
-  // },
+  // },   
   methods: {
-    //选则规格逻辑
-    // /**
-    //  * 正常属性点击
-    //  */
-
     // 加减
     detailPlus() {
       var add = $(".add").siblings(".countNumber");

@@ -6,7 +6,6 @@
     ></mt-search></router-link>
 
 
-  <span @click="loginOut()" style="position:fixed;z-index:999;font-size:80px;">登出</span>
 
 
     <!-- 上拉下拉 -->
@@ -30,8 +29,8 @@
     <div class="gridAll">
       <div class="grid">
         <div class="UsImg Ha_left">
-          <img :src="'http://www.d1sc.com/'+changeData(uSerNamePhoto.photo.path,uSerNamePhoto.photo.name)" v-if="uSerNamePhoto.photo!=null">
-          <img src="../../assets/mIcon/icon_yonghu.png" v-if="uSerNamePhoto.photo==null">
+          <img :src="'http://www.d1sc.com/'+changeData(uSerNamePhoto.photo.path,uSerNamePhoto.photo.name)" v-if="uSerNamePhoto">
+          <!-- <img src="../../assets/mIcon/icon_yonghu.png" v-if="uSerNamePhoto==null"> -->
         </div>
         <div class="HomeEp Ha_left">
           <p class="HomeEp1">个性签名</p>
@@ -146,7 +145,7 @@
           <ul>
             <li v-for="(modularB,index) in modularDateB.secondData" :key="index" @click="goto_detailSales(modularB.id)">
               <p class="modularDateB_P">
-                <img V-if="modularB.goods_main_photo" :src="'http://www.d1sc.com/'+changeData(modularB.goods_main_photo.path,modularB.goods_main_photo.name)">
+                <img v-if="modularB.goods_main_photo" :src="'http://www.d1sc.com/'+changeData(modularB.goods_main_photo.path,modularB.goods_main_photo.name)">
               </p>
               <p class="modularDateB_P1">{{modularB.goods_name}}</p>
               <p class="modularDateB_P2">￥{{modularB.store_price | formatMoney()}}</p>
@@ -269,6 +268,10 @@ export default {
         // name: ''
     };
   },
+    //挂载用户名
+  beforeMount(){
+    this.userid=localStorage.userid;
+  },
   methods:{
     //数据获取
     //首页数据接口
@@ -285,7 +288,7 @@ export default {
     path() {
       axios
         .post("/getHomePageDates.htm", qs.stringify({
-          userId:"153351",
+          userId:this.userid,
         }))
         .then(res => {
           console.log(res);
@@ -333,16 +336,12 @@ export default {
         this.$refs.loadmore.onBottomLoaded();
       }, 1000);
     },
-    loginOut(){
-      localStorage.userid='';
-      setCookie('searchValue', "", -1);  
-      history.go(0);
-    },
+    
     //==================================================================================================================
     LoderPath() {
       axios
         .post("/getHomePageDates.htm", qs.stringify({
-          userId:"153351",
+          userId:this.userid,
           currentPage:this.currentPage
         }))
         .then(res => {

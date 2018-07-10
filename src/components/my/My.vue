@@ -69,7 +69,7 @@
             <li><p>拓客系统</p></li>
             <li><p>收支明细</p></li>
             <li><p>职位管理</p></li>
-            <li><p>设置</p></li>
+            <router-link to="./my/shezhi"><li><p>设置</p></li></router-link>
           </ul>
       </div>
     <!-- 5 -->

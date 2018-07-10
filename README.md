@@ -28,17 +28,14 @@ npm run e2e
 npm test
 
 ........
+项目中，有些不完善的地方自行点击看效果。 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+目前未完成为：
+1.详情页立即购买跳转到确认订单
+2.确认订单模块。
+3.支付接口。
+4.订单状态管理。（待付款，待发货...）
+5.支付调通
 
-https://github.com/1324824901/vue-shop.git
-
-
-
-detailMore里的数据选择。
-图片的判断。
-二维数组的获取
-detailEvaluation里面的五角星。组件自定义函数传递
-上拉加载...
-详情页规格
-用户登录注册
+ 
+接口使用： config的 index.js和 api.config.js 
